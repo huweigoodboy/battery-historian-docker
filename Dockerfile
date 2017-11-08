@@ -1,7 +1,7 @@
 FROM golang:latest
-MAINTAINER bhaavanmerchant@gmail.com
+MAINTAINER huweigoodboy@gmail.com
 
-RUN  add-apt-repository ppa:openjdk-r/ppa　&& apt-get -y update && apt-get install -y openjdk-7-jdk
+RUN apt-get -y update && apt-get install -y openjdk-7-jdk
 
 RUN go get -d -u github.com/google/battery-historian
 WORKDIR /go/src/github.com/google/battery-historian
